@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SE Thurston Fire Authority Bond FAQ 2026</title>
+
+<style>
+:root{
+  --bg:#0f0e10;
+  --card:#151316;
+  --border:#2a272b;
+  --text:#ffffff;
+  --muted:#c7c7c7;
+  --accent:#DE5D5F;
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+.header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.logo{
+  max-width:160px;
+  margin-bottom:15px;
+}
+
+h1{
+  margin:0;
+  font-size:28px;
+}
+
+.search-box{
+  margin:30px 0;
+}
+
+input[type="text"]{
+  width:100%;
+  padding:14px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:#1a171b;
+  color:white;
+  font-size:16px;
+}
+
+details{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  margin-bottom:15px;
+  padding:15px;
+}
+
+summary{
+  font-weight:600;
+  cursor:pointer;
+}
+
+.category summary{
+  color:var(--accent);
+  font-size:18px;
+}
+
+.faq-question{
+  margin-top:10px;
+}
+
+.submit-box{
+  margin-top:40px;
+  padding:20px;
+  background:var(--card);
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+textarea{
+  width:100%;
+  height:100px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:#1a171b;
+  color:white;
+  margin-top:10px;
+}
+
+button{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:6px;
+  margin-top:10px;
+  cursor:pointer;
+}
+
+button:hover{
+  opacity:.85;
+}
+
+.small{
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<img src="SETFA Transparent.png" class="logo">
+<h1>SE THURSTON FIRE AUTHORITY</h1>
+<p class="small">2026 Capital Facilities Bond — Frequently Asked Questions</p>
+</div>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search FAQs (e.g., cost, levy, station, staffing)">
+</div>
+
+<!-- CATEGORY 1 -->
+<details class="category">
+<summary>Funding & Financial Transparency</summary>
+
+<details class="faq-question">
+<summary>How much will this bond cost property owners?</summary>
+<p>The proposed rate is $0.22 per $1,000 of assessed value. For example, a $500,000 assessed property would pay approximately $110 per year. Final amounts are determined by Thurston County based on official assessed value.</p>
+</details>
+
+<details class="faq-question">
+<summary>How long would the bond last?</summary>
+<p>The proposed bond would be structured for approximately 25 years.</p>
+</details>
+
+<details class="faq-question">
+<summary>Can bond funds be used for staffing or wages?</summary>
+<p>No. Bond funds may only be used for capital improvements such as stations and apparatus. Staffing and wages are funded separately through the annual levy operating budget.</p>
+</details>
+
+</details>
+
+<!-- CATEGORY 2 -->
+<details class="category">
+<summary>Facilities & Apparatus</summary>
+
+<details class="faq-question">
+<summary>Why replace fire engines?</summary>
+<p>Three fire engines are aging (34, 29, and 21 years old). Modern safety standards, reliability concerns, and response readiness require replacement.</p>
+</details>
+
+<details class="faq-question">
+<summary>Why renovate instead of build new stations?</summary>
+<p>Renovation provides updated facilities at a lower cost than new construction while addressing safety, response efficiency, and firefighter health standards.</p>
+</details>
+
+</details>
+
+<!-- CATEGORY 3 -->
+<details class="category">
+<summary>Community Impact</summary>
+
+<details class="faq-question">
+<summary>Will this improve response times?</summary>
+<p>Yes. Strategic renovations and apparatus updates improve coverage distribution and reduce turnout delays.</p>
+</details>
+
+<details class="faq-question">
+<summary>Will insurance rates be affected?</summary>
+<p>Modernized facilities and apparatus can help maintain or improve ISO ratings, which may influence homeowner insurance premiums.</p>
+</details>
+
+</details>
+
+<div class="submit-box">
+<h3>Have a Question Not Listed?</h3>
+<p class="small">Submit your question and we will follow up directly.</p>
+<textarea placeholder="Type your question here..."></textarea>
+<br>
+<button>Submit Question</button>
+</div>
+
+</div>
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function(){
+  let filter = this.value.toLowerCase();
+  let details = document.querySelectorAll('.faq-question');
+  details.forEach(function(item){
+    let text = item.innerText.toLowerCase();
+    if(text.includes(filter)){
+      item.style.display="";
+    } else {
+      item.style.display="none";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
